@@ -1,0 +1,29 @@
+{
+  "name": "grrlopes/moneyhoney",
+  "description": "It is a simple yet powerful money tracker",
+  "minimum-stability": "stable",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Gabriel Lopes",
+      "email": "gabrielrrlopes@gmail.com",
+      "role": "Developer",
+      "homepage": "https://github.com/grrlopes"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "require": {
+    "ext-pdo": "^7.4",
+    "ext-json": "^7.4",
+    "php": ">=7.4.19",
+    "slim/slim": "^4.8",
+    "slim/psr7": "^1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "mhoney\\": "src/"
+    }
+  }
+}
