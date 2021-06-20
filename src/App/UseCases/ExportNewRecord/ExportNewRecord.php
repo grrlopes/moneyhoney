@@ -4,15 +4,23 @@ declare(strict_types=1);
 
 namespace Mhoney\App\UseCases\ExportNewRecord;
 
+use Mhoney\Domain\Repositories\INewRecordRepository;
+
 final class ExportNewRecord
 {
+  private INewRecordRepository $repository;
 
-  public function __construct()
+  public function __construct(INewRecordRepository $newRecord)
   {
+    $this->repository = $newRecord;
   }
 
-  public function handle(InputBoundaryDTO $data): string
+  public function handler(InputBoundaryDTO $data): void
   {
-    return $data->getName();
+    $this->repository->newRecordRepository(
+      $data->getName(),
+      $data->getAmount(),
+      $data->getStoreName()
+    );
   }
 }
