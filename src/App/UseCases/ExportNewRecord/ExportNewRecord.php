@@ -15,9 +15,9 @@ final class ExportNewRecord
     $this->repository = $newRecord;
   }
 
-  public function handler(InputBoundaryDTO $data): void
+  public function handler(InputBoundaryDTO $data): string
   {
-    $this->repository->newRecordRepository(
+    return $this->repository->newRecordRepository(
       $data->getName(),
       $data->getAmount(),
       $data->getStoreName()

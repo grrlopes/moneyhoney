@@ -10,5 +10,5 @@ interface INewRecordRepository
     string $name,
     string $amount,
     string $storeName
-  ): void;
+  ): string;
 }

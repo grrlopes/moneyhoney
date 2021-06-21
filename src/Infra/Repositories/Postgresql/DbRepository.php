@@ -12,7 +12,8 @@ final class DbRepository implements INewRecordRepository
     string $name,
     string $amount,
     string $storeName
-  ): void {
-    print("tra tra");
+  ): string {
+    $result = ["message" => "New record has been created!"];
+    return json_encode($result);
   }
 }
