@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  */
 class NewRecordTest extends TestCase
 {
-  public function testNewRecord()
+  public function testNewRecord(): void
   {
     $newRecordRepository = new DbRepository();
     $newRecord = new ExportNewRecord($newRecordRepository);

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Mhoney\App\UseCases\ExportNewRecord;
 
-use Mhoney\Domain\Repositories\INewRecordRepository;
+use Mhoney\Domain\Repositories\IRecordRepository;
 
 final class ExportNewRecord
 {
-  private INewRecordRepository $repository;
+  private IRecordRepository $repository;
 
-  public function __construct(INewRecordRepository $newRecord)
+  public function __construct(IRecordRepository $newRecord)
   {
     $this->repository = $newRecord;
   }
